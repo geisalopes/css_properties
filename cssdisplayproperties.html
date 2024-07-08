@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Display Properties</title>
+    <style>
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: normal;
+        text-align: center;
+      }
+      h2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: normal;
+      }
+      .block {
+        display: block;
+        width: 50%;
+        background-color: lightblue;
+        margin: 10px 0;
+      }
+      .inline {
+        display: inline;
+        background-color: lightcoral;
+        margin: 5px;
+      }
+
+      .inline-block {
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        background-color: lightgreen;
+        margin: 5px;
+      }
+      .none {
+        display: none;
+      }
+      .flex-container {
+        display: flex;
+        background-color: lightgrey;
+      }
+      .flex-item {
+        background-color: lightblue;
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: lightgrey;
+      }
+      .grid-item {
+        background-color: lightgreen;
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Display Properties</h1>
+    <h2>
+      1. display: block; Elementos com display: block; ocupam toda a largura
+      disponível e começam em uma nova linha. Exemplos de elementos de bloco são
+      div, h1, p, e section.
+    </h2>
+    <div class="block">Elemento de bloco 1</div>
+    <div class="block">Elemento de bloco 2</div>
+
+    <h2>
+      2. display: inline; Elementos com display: inline; ocupam apenas o espaço
+      necessário e não iniciam uma nova linha. Exemplos de elementos inline são
+      span, a, strong, e em.
+    </h2>
+    <span class="inline">Elemento inline 1</span>
+    <span class="inline">Elemento inline 2</span>
+
+    <h2>
+      3. display: inline-block; Elementos com display: inline-block; combinam as
+      características de elementos inline e block. Eles não iniciam uma nova
+      linha, mas permitem definir largura e altura.
+    </h2>
+    <div class="inline-block">Inline-Block 1</div>
+    <div class="inline-block">Inline-Block 2</div>
+
+    <h2>
+      4. display: none; Elementos com display: none; são removidos do fluxo do
+      documento, ou seja, não são exibidos na página.
+    </h2>
+    <div class="none">Este elemento não será exibido</div>
+    <div>Este elemento será exibido</div>
+
+    <h2>
+      5. display: flex; Elementos com display: flex; ativam o modelo de layout
+      flexível, permitindo uma organização mais eficiente dos itens no
+      container. É útil para criar layouts responsivos.
+    </h2>
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>
+      6. display: grid; Elementos com display: grid; ativam o modelo de layout
+      em grade, que permite organizar os itens em linhas e colunas.
+    </h2>
+    <div class="grid-container">
+      <div class="grid-item">Item 1</div>
+      <div class="grid-item">Item 2</div>
+      <div class="grid-item">Item 3</div>
+    </div>
+  </body>
+</html>
