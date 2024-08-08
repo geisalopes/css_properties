@@ -1,0 +1,167 @@
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: center;
+  }
+  h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+  }
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+  }
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .block {
+    display: block;
+    width: 50%;
+    background-color: lightblue;
+    margin: 10px 0;
+  }
+  .inline {
+    display: inline;
+    background-color: lightcoral;
+    margin: 5px;
+  }
+  
+  .inline-block {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background-color: lightgreen;
+    margin: 5px;
+  }
+  .none {
+    display: none;
+  }
+  .flex-container {
+    display: flex;
+    background-color: lightgrey;
+  }
+  .flex-item {
+    background-color: lightblue;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: lightgrey;
+  }
+  .grid-item {
+    background-color: lightgreen;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .flex-container-1 {
+    display: flex;
+    flex-direction: row; /* Eixo principal: horizontal */
+    justify-content: space-around;
+    align-items: center; /* Eixo cruzado: vertical */
+  }
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas de largura igual */
+    grid-template-rows: auto; /* Linha ajusta automaticamente */
+    gap: 10px;
+  }
+  .flex-container-2 {
+    display: flex;
+    justify-content: center; /* Alinhamento ao longo do eixo principal */
+    align-items: stretch; /* Alinhamento ao longo do eixo cruzado */
+  }
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    justify-items: center; /* Alinhamento de itens individualmente */
+    align-content: center; /* Alinhamento de todas as linhas da grade */
+  }
+  .grid-container-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: lightgrey;
+  }
+  .flex-container-3 {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    padding: 20px;
+  }
+  .item {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 5px;
+  }
+  .float-left {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 10px;
+  }
+  .float-right {
+    float: right;
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    margin: 10px;
+  }
+  .content {
+    background-color: lightgrey;
+    padding: 10px;
+  }
+  .float_action {
+    display: inline-block;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .float-left-2 {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 10px;
+  }
+  .float-right-2 {
+    float: right;
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    margin: 10px;
+  }
+  .content-2 {
+    background-color: lightgrey;
+    padding: 10px;
+  }
+  .float-left-3 {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 10px;
+  }
+  .content-3 {
+    background-color: lightgrey;
+    padding: 10px;
+  }
+  .clear-both-3 {
+    clear: both;
+  }
+  
