@@ -3,7 +3,204 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS Display Properties</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Difference between Flexbox and Grid</h1>
+    <h2>1. Purpose and Use</h2>
+    <p>
+      <strong>Flexbox:</strong> Flexbox is ideal for one-dimensional layouts,
+      i.e. for aligning items in a single row or column. It's great for
+      component layouts, such as navigation bars, buttons, and aligning items in
+      a row. <br /><br />
+      <strong>Grid:</strong> Grid is ideal for two-dimensional layouts, i.e. for
+      aligning items in rows and columns. It is best suited to complete page
+      layouts, such as content grids, website layouts, etc.
+    </p>
+    <h2>2. Axes</h2>
+    <p>
+      <strong>Flexbox:</strong> Works on a single axis at a time (horizontal or
+      vertical). You define the main axis and the cross axis.
+    </p>
+    <div class="flex-container-1">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+    <p>
+      <strong>Grid:</strong> Works with two axes at the same time (horizontal
+      and vertical). You define rows and columns explicitly.
+    </p>
+
+    <div class="grid-container-1">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+    <h2>3. Alinhamento</h2>
+    <p>
+      <strong>Flexbox:</strong> Oferece controle sobre o alinhamento e
+      distribuição de espaço entre itens dentro de um contêiner flexível ao
+      longo do eixo principal e cruzado.
+    </p>
+    <div class="flex-container-2">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+    <p>
+      <strong>Grid:</strong> Oferece controle sobre o alinhamento de itens e
+      áreas dentro do contêiner da grade, tanto em linhas quanto em colunas.
+    </p>
+    <div class="grid-container-2">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+    <h2>4. Complexidade e Controle</h2>
+    <p>
+      <strong>Flexbox:</strong> Mais simples e fácil de usar para layouts
+      lineares. Menos controle sobre as posições de itens em um layout
+      bidimensional.
+    </p>
+    <p>
+      <strong>Grid:</strong> Maiscomplexo e oferece maior controle sobre a
+      disposição de itens em um layout bidimensional. Permite criar layouts
+      complexos com menos código.
+    </p>
+    <h2>5. Resumindo</h2>
+    <p>
+      <strong>Flexbox:</strong> Melhor para layouts unidimensionais. Útil para
+      alinhamento e distribuição de itens em uma única linha ou coluna.
+    </p>
+    <p>
+      <strong>Grid:</strong> Melhor para layouts bidimensionais. Útil para criar
+      grades complexas de linhas e colunas.
+    </p>
+    <br />
+    <h3><strong>Exemplos Combinados</strong></h3>
+    <p>
+      Em alguns casos, você pode querer combinar Flexbox e Grid para aproveitar
+      os pontos fortes de ambos.
+    </p>
+    <div class="grid-container-3">
+      <div class="flex-container-3">
+        <div class="item">Flex Item 1</div>
+        <div class="item">Flex Item 2</div>
+        <div class="item">Flex Item 3</div>
+      </div>
+      <div class="flex-container-3">
+        <div class="item">Flex Item 4</div>
+        <div class="item">Flex Item 5</div>
+        <div class="item">Flex Item 6</div>
+      </div>
+    </div>
+    <p>
+      Neste exemplo, usamos Grid para criar duas colunas e dentro de cada célula
+      da grade usamos Flexbox para alinhar os itens horizontalmente. Isso
+      demonstra como podemos combinar ambos os modelos para criar layouts mais
+      sofisticados.
+    </p>
+    <h1>CSS Float</h1>
+    <p>
+      A propriedade float no CSS é usada para posicionar elementos ao longo da
+      lateral esquerda ou direita de seu contêiner pai, permitindo que o
+      conteúdo circule ao redor deles. Embora float tenha sido uma técnica
+      popular para layout no passado, hoje em dia é mais comum usar Flexbox e
+      Grid para essa finalidade. No entanto, float ainda é útil para alguns
+      cenários específicos.
+    </p>
+    <h3><strong>Propriedades float e Clear</strong></h3>
+    <ul>
+      <li>float: left; — O elemento flutua para a esquerda.</li>
+      <li>float: right; — O elemento flutua para a direita.</li>
+      <li>float: none; — O elemento não flutua (padrão).</li>
+      <li>
+        clear: left; — O elemento não permite elementos flutuantes à esquerda.
+      </li>
+      <li>
+        clear: right; — O elemento não permite elementos flutuantes à direita.
+      </li>
+      <li>
+        clear: both; — O elemento não permite elementos flutuantes em ambos os
+        lados.
+      </li>
+    </ul>
+    <h3>Exemplo Básico de float</h3>
+    <p>Vamos ver como float funciona com alguns exemplos:</p>
+    <div class="float_action">
+      <div class="float-left">Flutuando à esquerda</div>
+      <div class="float-right">Flutuando à direita</div>
+      <div class="content">
+        Este é um conteúdo que irá circundar os elementos flutuantes. Você pode
+        ver como ele se ajusta ao redor das caixas flutuantes.
+      </div>
+    </div>
+    <h2>Problemas Comuns com float e Soluções</h2>
+    <p>
+      Um dos problemas comuns ao usar float é que os elementos contêineres não
+      se expandem automaticamente para incluir elementos flutuantes. Isso pode
+      causar problemas com o layout. Uma solução para isso é usar a técnica de
+      clearfix.
+    </p>
+    <h3>Clearfix</h3>
+    <p>
+      A técnica de clearfix é usada para corrigir problemas de colapso de
+      contêineres devido a elementos flutuantes.
+    </p>
+    <div class="clearfix">
+      <div class="float-left-2">Flutuando à esquerda</div>
+      <div class="float-right-2">Flutuando à direita</div>
+      <div class="content-2">
+        Este é um conteúdo que irá circundar os elementos flutuantes. Você pode
+        ver como ele se ajusta ao redor das caixas flutuantes.
+      </div>
+    </div>
+    <h3>Uso do clear</h3>
+    <p>
+      A propriedade clear é usada para controlar o comportamento dos elementos
+      após os elementos flutuantes.
+    </p>
+    <div class="float-left-3">Flutuando à esquerda</div>
+    <div class="content-3">
+      Este é um conteúdo que irá circundar os elementos flutuantes. Você pode
+      ver como ele se ajusta ao redor das caixas flutuantes.
+    </div>
+    <div class="clear-both-3"></div>
+    <div class="content-3">
+      Este conteúdo aparece após limpar o float, iniciando abaixo dos elementos
+      flutuantes.
+    </div>
+    <h2>Resumo</h2>
+    <p>
+      <em
+        >PS: Angela recomenda usar float somente para envolver textos ao redor
+        das imagens. De acordo com ela, existe coisa melhor que o float, como
+        grid e flexbox.</em
+      >
+    </p>
+    <p>
+      <strong>Float:</strong> Posiciona elementos à esquerda ou à direita,
+      permitindo que outros elementos circulem ao redor.
+    </p>
+    <p>
+      <strong>Clear:</strong> Controla o comportamento dos elementos
+      subsequentes em relação aos elementos flutuantes.
+    </p>
+    <p>
+      <strong>Clearfix:</strong> Soluciona problemas de colapso de contêineres
+      devido a elementos flutuantes.
+    </p>
+    <p>
+      A propriedade <strong>float</strong> foi amplamente utilizada no passado
+      para layouts de página, mas hoje é frequentemente substituída por Flexbox
+      e Grid devido à sua maior flexibilidade e facilidade de uso. No entanto,
+      <strong>float</strong> ainda tem seu lugar para certas situações
+      específicas e saber como usá-lo pode ser útil.
+    </p>
+  </body>
 </html>
