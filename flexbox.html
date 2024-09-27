@@ -3,10 +3,403 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>CSS Display Properties</title>
+    <link rel="stylesheet" href="flexbox.css" />
+    <title>Flexbox</title>
   </head>
   <body>
+    <h1>Flexbox</h1>
+    <p>
+      The display: flex property in CSS is part of the Flexible Box Layout,
+      commonly known as Flexbox. It provides a more efficient way to align and
+      distribute space among items in a container, even when their size is
+      unknown or dynamic.
+    </p>
+    <h2>Basic Concepts</h2>
+    <h3>
+      <strong>1. Basic display: flex</strong>
+    </h3>
+    <p>
+      When you apply <strong>display: flex</strong> to a container, it becomes a
+      flex container, and its direct children become flex items. These items
+      will automatically align themselves in a row by default.
+    </p>
+    <h4>Example:</h4>
+    <div style="display: flex; background-color: lightblue; padding: 10px">
+      <div style="background-color: coral; padding: 20px; margin: 5px">
+        Item 1
+      </div>
+      <div style="background-color: lightgreen; padding: 20px; margin: 5px">
+        Item 2
+      </div>
+      <div style="background-color: lightpink; padding: 20px; margin: 5px">
+        Item 3
+      </div>
+    </div>
+    <h4>Explanation:</h4>
+    <ul>
+      <li>The container (div with display: flex) has three child items.</li>
+      <li>Each item is colored differently to distinguish them.</li>
+      <li>By default, the items are placed in a row.</li>
+    </ul>
+    <img src="img/display-flexbox.png" alt="Flexbox_Example" />
+    <hr />
+    <h3><strong>2. Flex Direction:</strong></h3>
+    <p>
+      The <strong>flex-direction</strong> property controls the direction in
+      which the flex items are placed inside the flex container.
+    </p>
+    <ul>
+      <li>
+        <strong>row (default): </strong>Items are aligned horizontally from left
+        to right.
+      </li>
+      <li>
+        <strong>row-reverse:</strong> Items are aligned horizontally from right
+        to left.
+      </li>
+      <li>
+        <strong>column: </strong>Items are aligned vertically from top to
+        bottom.
+      </li>
+      <li>
+        <strong>column-reverse: </strong>Items are aligned vertically from
+        bottom to top.
+      </li>
+    </ul>
+    <h4>Example:</h4>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        background-color: lightblue;
+        padding: 10px;
+      "
+    >
+      <div style="background-color: coral; padding: 20px; margin: 5px">
+        Item 1
+      </div>
+      <div style="background-color: lightgreen; padding: 20px; margin: 5px">
+        Item 2
+      </div>
+      <div style="background-color: lightpink; padding: 20px; margin: 5px">
+        Item 3
+      </div>
+    </div>
+    <h4>Explanation:</h4>
+    <ul>
+      <li>
+        Here, <strong>flex-direction: column</strong> is used, so the items are
+        stacked vertically.
+      </li>
+    </ul>
+    <hr />
+    <h3><strong>3. justify-content</strong></h3>
+    <p>
+      The <strong>justify-content</strong> property aligns the flex items along
+      the main axis (horizontal axis in a row, vertical in a column).
+    </p>
+    <ul>
+      <li>
+        <strong>flex-start (default): </strong>Items are packed towards the
+        start.
+      </li>
+      <li><strong>center: </strong> Items are centered along the main axis.</li>
+      <li><strong>flex-end: </strong>Items are packed towards the end.</li>
+      <li>
+        <strong>space-between:</strong> Items are evenly distributed, with the
+        first item at the start and the last item at the end.
+      </li>
+      <li>
+        <strong>space-around: </strong> Items are evenly distributed with space
+        around them.
+      </li>
+      <li>
+        <strong>space-evenly: </strong> Items are evenly distributed with equal
+        space between them.
+      </li>
+    </ul>
+    <h4>Example:</h4>
+    <div
+      style="
+        display: flex;
+        justify-content: space-around;
+        background-color: lightblue;
+        padding: 10px;
+      "
+    >
+      <div style="background-color: coral; padding: 20px; margin: 5px">
+        Item 1
+      </div>
+      <div style="background-color: lightgreen; padding: 20px; margin: 5px">
+        Item 2
+      </div>
+      <div style="background-color: lightpink; padding: 20px; margin: 5px">
+        Item 3
+      </div>
+    </div>
+    <h4>Explanation:</h4>
+    <ul>
+      <li>
+        Here <strong>justify-content <em>space-around</em></strong> is used, so
+        there is equal space around each item.
+      </li>
+    </ul>
+    <hr />
+    <h3><strong>4. align-items</strong></h3>
+    <p>
+      The <strong>align-items</strong> property aligns the flex items along the
+      cross axis (vertical axis in a row, horizontal in a column).
+    </p>
+    <ul>
+      <li><strong>stretch:</strong> to fill the container.</li>
+      <li>
+        <strong>flex-start: </strong> Items are aligned at the start of the
+        cross axis.
+      </li>
+      <li>
+        <strong>center: </strong> Items are centered along the cross axis.
+      </li>
+      <li>
+        <strong>flex-end: </strong> Items are aligned at the end of the cross
+        axis.
+      </li>
+      <li>
+        <strong>baseline:</strong> Items are aligned along their baseline.
+      </li>
+    </ul>
+    <h4>Example:</h4>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        height: 200px;
+        background-color: lightblue;
+        padding: 10px;
+      "
+    >
+      <div style="background-color: coral; padding: 20px; margin: 5px">
+        Item 1
+      </div>
+      <div style="background-color: lightgreen; padding: 20px; margin: 5px">
+        Item 2
+      </div>
+      <div style="background-color: lightpink; padding: 20px; margin: 5px">
+        Item 3
+      </div>
+    </div>
+    <h4>Explanation</h4>
+    <ul>
+      <li>
+        <strong>Align-items: center</strong> is used, so the items are centered
+        vertically within the container.
+      </li>
+    </ul>
+    <hr />
+    <h3><strong>5. flex-wrap</strong></h3>
+    <p>
+      The <strong>flex-wrap</strong> property controls whether the flex items
+      should wrap onto multiple lines.
+    </p>
+    <ul>
+      <li>
+        <strong>nowrap (default):</strong> All items are kept on a single line.
+      </li>
+      <li>
+        <strong>wrap:</strong> Items will wrap onto multiple lines if necessary.
+      </li>
+      <li>
+        <strong>wrap-reverse:</strong> Items will wrap onto multiple lines in
+        reverse order.
+      </li>
+    </ul>
+    <h4>Example:</h4>
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        background-color: lightblue;
+        padding: 10px;
+      "
+    >
+      <div
+        style="
+          background-color: coral;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 1
+      </div>
+      <div
+        style="
+          background-color: lightgreen;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 2
+      </div>
+      <div
+        style="
+          background-color: lightpink;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 3
+      </div>
+      <div
+        style="
+          background-color: lightcoral;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 4
+      </div>
+      <div
+        style="
+          background-color: aquamarine;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 5
+      </div>
+      <div
+        style="
+          background-color: antiquewhite;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 6
+      </div>
+      <div
+        style="
+          background-color: azure;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 7
+      </div>
+    </div>
+    <h4>Explanation:</h4>
+    <ul>
+      <li>
+        <strong>flex-wrap: wrap</strong> is used, so the items will wrap onto
+        the next line when they can't fit in one row.
+      </li>
+    </ul>
+    <hr />
+    <h3><strong>6. align-content</strong></h3>
+    <p>
+      The <strong>align-content</strong> property aligns rows of items when
+      there's extra space in the container.
+    </p>
+    <ul>
+      <li><strong>flex-start:</strong> Rows are packed at the top.</li>
+      <li><strong>center:</strong> Rows are centered</li>
+      <li><strong>flex-end:</strong> Rows are packed at the bottom.</li>
+      <li>
+        <strong>space-between:</strong> Rows are evenly distributed with no
+        space between them.
+      </li>
+      <li>
+        <strong>space-around:</strong> Rows are evenly distributed with space
+        around them.
+      </li>
+      <li>
+        <strong>space-evenly:</strong> Rows are evenly distributed with equal
+        space between them.
+      </li>
+    </ul>
+    <h4>Example:</h4>
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 300px;
+        background-color: lightblue;
+        padding: 10px;
+      "
+    >
+      <div
+        style="
+          background-color: coral;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 1
+      </div>
+      <div
+        style="
+          background-color: lightgreen;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 2
+      </div>
+      <div
+        style="
+          background-color: lightpink;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 3
+      </div>
+      <div
+        style="
+          background-color: lightcoral;
+          padding: 20px;
+          margin: 5px;
+          width: 150px;
+        "
+      >
+        Item 4
+      </div>
+    </div>
+    <h4>Explanation:</h4>
+    <p>
+      Here <strong>align-content: space-between</strong> is used to distribute
+      the rows of items with equal space between them vertically.
+    </p>
+    <hr />
+    <h3><strong>Summary of Key Flex Properties</strong></h3>
+    <ul>
+      <li><strong>display: flex</strong>: Turns a container into a flexbox.</li>
+      <li>
+        <strong>flex-direction</strong>: Determines the direction of items (row,
+        column).
+      </li>
+      <li>
+        <strong>justify-content</strong>: Aligns items along the main axis.
+      </li>
+      <li><strong>align-items</strong>: Aligns items along the cross axis.</li>
+      <li>
+        <strong>flex-wrap</strong>: Allows items to wrap onto multiple lines.
+      </li>
+      <li>
+        <strong>align-content</strong>: Aligns rows of items when they overflow.
+      </li>
+    </ul>
+    <hr />
+    <!-- Aqui comeca a outra parte -->
     <h1>Difference between Flexbox and Grid</h1>
     <h2>1. Purpose and Use</h2>
     <p>
